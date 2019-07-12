@@ -1,0 +1,6 @@
+LS1012ALISA BOARD
+M:      Joris Offouga <joris.offouga@huandco.com>
+S:      Maintained
+F:      board/huandco/ls1012alisa/
+F:      include/configs/ls1012alisa.h
+F:      configs/ls1012alisa_defconfig
