@@ -93,6 +93,7 @@ config SANDBOX
 	select PCI_ENDPOINT
 	select SPI
 	select SUPPORT_OF_CONTROL
+	select SYSRESET_CMD_POWEROFF if CMD_POWEROFF
 	imply BITREVERSE
 	select BLOBLIST
 	imply CMD_DM
@@ -123,6 +124,9 @@ config SANDBOX
 	imply DM_SOUND
 	imply PCI_SANDBOX_EP
 	imply PCH
+	imply PHYLIB
+	imply DM_MDIO
+	imply DM_MDIO_MUX
 
 config SH
 	bool "SuperH architecture"

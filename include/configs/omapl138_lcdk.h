@@ -17,14 +17,6 @@
 #undef	CONFIG_SYS_USE_NOR
 
 /*
-* Disable DM_* for SPL build and can be re-enabled after adding
-* DM support in SPL
-*/
-#ifdef CONFIG_SPL_BUILD
-#undef CONFIG_DM_I2C
-#undef CONFIG_DM_I2C_COMPAT
-#endif
-/*
  * SoC Configuration
  */
 #define CONFIG_MACH_OMAPL138_LCDK
@@ -215,6 +207,12 @@
 #define CONFIG_SYS_BARGSIZE	CONFIG_SYS_CBSIZE /* Boot Args Buffer Size */
 #define CONFIG_SYS_LOAD_ADDR	(PHYS_SDRAM_1 + 0x700000)
 #define CONFIG_MX_CYCLIC
+
+/*
+ * USB Configs
+ */
+#define CONFIG_USB_OHCI_NEW
+#define CONFIG_SYS_USB_OHCI_MAX_ROOT_PORTS	15
 
 /*
  * Linux Information

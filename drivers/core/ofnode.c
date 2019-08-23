@@ -212,7 +212,11 @@ ofnode ofnode_get_parent(ofnode node)
 
 const char *ofnode_get_name(ofnode node)
 {
-	assert(ofnode_valid(node));
+	if (!ofnode_valid(node)) {
+		debug("%s node not valid\n", __func__);
+		return NULL;
+	}
+
 	if (ofnode_is_np(node))
 		return strrchr(node.np->full_name, '/') + 1;
 
@@ -770,6 +774,14 @@ u64 ofnode_translate_address(ofnode node, const fdt32_t *in_addr)
 		return fdt_translate_address(gd->fdt_blob, ofnode_to_offset(node), in_addr);
 }
 
+u64 ofnode_translate_dma_address(ofnode node, const fdt32_t *in_addr)
+{
+	if (ofnode_is_np(node))
+		return of_translate_dma_address(ofnode_to_np(node), in_addr);
+	else
+		return fdt_translate_dma_address(gd->fdt_blob, ofnode_to_offset(node), in_addr);
+}
+
 int ofnode_device_is_compatible(ofnode node, const char *compat)
 {
 	if (ofnode_is_np(node))
@@ -876,5 +888,5 @@ int ofnode_set_enabled(ofnode node, bool value)
 	if (value)
 		return ofnode_write_string(node, "status", "okay");
 	else
-		return ofnode_write_string(node, "status", "disable");
+		return ofnode_write_string(node, "status", "disabled");
 }
