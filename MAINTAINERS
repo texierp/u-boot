@@ -111,6 +111,7 @@ F:	cmd/arm/
 ARM ALTERA SOCFPGA
 M:	Marek Vasut <marex@denx.de>
 M:	Simon Goldschmidt <simon.k.r.goldschmidt@gmail.com>
+M:	Ley Foon Tan <ley.foon.tan@intel.com>
 S:	Maintainted
 T:	git https://gitlab.denx.de/u-boot/custodians/u-boot-socfpga.git
 F:	arch/arm/mach-socfpga/
@@ -365,7 +366,7 @@ F:	arch/arm/include/asm/arch-stv0991/
 
 ARM SUNXI
 M:	Jagan Teki <jagan@amarulasolutions.com>
-M:	Maxime Ripard <maxime.ripard@bootlin.com>
+M:	Maxime Ripard <mripard@kernel.org>
 S:	Maintained
 T:	git https://gitlab.denx.de/u-boot/custodians/u-boot-sunxi.git
 F:	arch/arm/cpu/armv7/sunxi/
@@ -565,7 +566,7 @@ S:	Maintained
 T:	git https://gitlab.denx.de/u-boot/custodians/u-boot-freebsd.git
 
 FREESCALE QORIQ
-M:	Prabhakar Kushwaha <prabhakar.kushwaha@nxp.com>
+M:	Priyanka Jain <priyanka.jain@nxp.com>
 S:	Maintained
 T:	git https://gitlab.denx.de/u-boot/custodians/u-boot-fsl-qoriq.git
 F:	drivers/watchdog/sp805_wdt.c
@@ -723,13 +724,13 @@ F:	arch/powerpc/cpu/mpc83xx/
 F:	arch/powerpc/include/asm/arch-mpc83xx/
 
 POWERPC MPC85XX
-M:	Prabhakar Kushwaha <prabhakar.kushwaha@nxp.com>
+M:	Priyanka Jain <priyanka.jain@nxp.com>
 S:	Maintained
 T:	git https://gitlab.denx.de/u-boot/custodians/u-boot-mpc85xx.git
 F:	arch/powerpc/cpu/mpc85xx/
 
 POWERPC MPC86XX
-M:	Prabhakar Kushwaha <prabhakar.kushwaha@nxp.com>
+M:	Priyanka Jain <priyanka.jain@nxp.com>
 S:	Maintained
 T:	git https://gitlab.denx.de/u-boot/custodians/u-boot-mpc86xx.git
 F:	arch/powerpc/cpu/mpc86xx/
